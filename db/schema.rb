@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150716123633) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "project_item_id"
+    t.integer  "user_id"
   end
 
   create_table "project_items", force: :cascade do |t|

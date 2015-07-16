@@ -6,7 +6,8 @@ class CreateProjectItemComments < ActiveRecord::Migration
       t.timestamps null: false
 
       t.belongs_to :project_item
-    
+      t.belongs_to :user
+
     end
   end
 end
