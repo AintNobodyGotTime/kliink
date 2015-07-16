@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
-	
-  get 'point_source/show'
 
-  get 'donation/create'
+	root to: "site#index" 
 
-  resources :controllers
+	get 'site/index'
+
+  get 'project/index' => "project#show"
+
+  get '/project/index' => "donation#create"
+
+  post '/project/index' => "project_item_comment#create"
+
+  resources :projects
 	devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
 	# devise_scope :user do
@@ -12,8 +18,8 @@ Rails.application.routes.draw do
 	#   get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 	# end
 	
-  get 'site/index'
   
-  root to: "site#index" 
+  
+  
   
 end
