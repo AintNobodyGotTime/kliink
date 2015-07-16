@@ -5,8 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :description
 
       t.timestamps null: false
-      
-      t.belongs_to :user
+
       t.belongs_to :ngo
     end
   end
