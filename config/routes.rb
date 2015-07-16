@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 	
+  get 'point_source/show'
+
+  get 'donation/create'
+
+  resources :controllers
 	devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
 	# devise_scope :user do

@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 	has_many :donations
 	has_many :point_sources
 
-	validates :email, presence: true, uniqueness: true
+	validates :email, presence: true
 	# validates :password_digest, presence: true
 
 

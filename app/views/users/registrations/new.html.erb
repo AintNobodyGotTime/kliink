@@ -24,10 +24,12 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
+<% end %>
+
 <div>
   <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 </div>
-<% end %>
 
 
 <%= render "users/shared/links" %>
