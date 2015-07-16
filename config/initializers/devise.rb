@@ -232,7 +232,10 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :facebook, "819215978158244", "bf8f7338d362d79045a26a285b4b1998"
+
+  config.omniauth :facebook, "1081570238539731", "4bee83de235fb69f3eb3aaabe152c13b"
+
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
