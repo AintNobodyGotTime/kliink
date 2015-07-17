@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simple_form'
 
+gem 'pry-rails'
+
 gem 'certified'
 
 gem 'omniauth'

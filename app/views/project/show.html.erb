@@ -1,7 +1,38 @@
 
-<%= form_for :project_item_comment do |f| %>
-Comment on this project piece: <%= f.text_field :content %><br />
- <%= f.hidden_field :project_item_id, :value => 1%>
- <%= f.hidden_field :user_id, :value => current_user.id%>
-  <%= f.button :submit %>
+<% @project.project_items.each do |item| %>
+
+  <div class="project_item">
+
+     <div class="content">
+       <%=item.content %>
+     </div>
+
+     <div class="interactions">
+       <span class="like_button">
+         <img src="" alt="" class="like">
+       </span>
+       <span class="share_button">
+         <img src="" alt="" class="share">
+       </span>
+     </div>
+
+     <% item.project_item_comments.each do |comment| %>
+       <% user = User.find(comment.user_id) %>
+        <div class="show_comment">
+          <%= comment.content %>
+        </div>
+        <div class="author">
+          - <%=user.first_name%> <%=user.last_name %>
+        </div>
+
+     <% end %>
+
+     <%= form_for :project_item_comment do |f| %>
+      Comment on this project piece: <%= f.text_field :content %><br />
+      <%= f.hidden_field :project_item_id, :value => item.id%>
+      <%= f.hidden_field :user_id, :value => current_user.id%>
+    <%= f.button :submit %>
+  <% end %>
+  </div>
+
 <% end %>

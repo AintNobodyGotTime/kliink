@@ -24,22 +24,31 @@ class ProjectItemCommentController < ApplicationController
   # POST /project_item_comments
   # POST /project_item_comments.json
   def create
-    @project_item_comment = ProjectItemComment.new(project_item_comment_params)
+    project_item_comment = ProjectItemComment.new
+    project_item_comment.content = params[:project_item_comment][:content]
+    project_item_comment.user_id = params[:project_item_comment][:user_id]
+    project_item_comment.project_item_id = params[:project_item_comment][:project_item_id]
 
-    if @project_item_comment.save
-      user_signed_in?
-        user = current_user
-        user.total_points += 3 
-        @project_item_comment.point_source = "comment"
-      end
+    if project_item_comment.save
+      ps = PointSource.new
+      ps.user_id = current_user.id
+      ps.project_id = project_item_comment.project_item.project.id
+      ps.source = "comment"
+      ps.points = 3
+      ps.save
+
+      user = current_user
+      user.total_points += 3
+      user.save
+    end
 
     respond_to do |format|
-      if @project_item_comment.save
-        format.html { redirect_to @project_item_comment, notice: 'Project item comment was successfully created.' }
-        format.json { render :show, status: :created, location: @project_item_comment }
+      if project_item_comment.save
+        format.html { redirect_to '/project/index', notice: 'Project item comment was successfully created.' }
+        format.json { render :show, status: :created, location: project_item_comment }
       else
         format.html { render :new }
-        format.json { render json: @project_item_comment.errors, status: :unprocessable_entity }
+        format.json { render json: project_item_comment.errors, status: :unprocessable_entity }
       end
     end
   end
