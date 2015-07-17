@@ -1,4 +1,5 @@
 class PointSourceController < ApplicationController
-  def show
+  def create
+
   end
 end
