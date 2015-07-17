@@ -2,6 +2,18 @@
 <html>
 <head>
   <title>Kliink</title>
+
+  <% if current_user != nil %>
+  <script>
+    var current_user = <%=current_user.id %>;
+  </script>
+  <% end %>
+
+  <% if @project != nil %>
+  <script>
+    var project_id = <%=@project.id %>;
+  </script>
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -24,7 +36,7 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
