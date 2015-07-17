@@ -3,6 +3,5 @@ class ProjectController < ApplicationController
   end
 
   def show
-  	
   end
 end
