@@ -1,15 +1,31 @@
 class DonationController < ApplicationController
   def create
-  	@donation = Donation.new(donation_params)
+  	donation = Donation.new
+    donation.amount = params[:donation][:amount]
+    donation.user_id = params[:donation][:user_id]
+    donation.project_id = params[:donation][:project_id]
+
+    if donation.save
+      ps = PointSource.new
+      ps.user_id = params[:donation][:user_id]
+      ps.project_id = params[:donation][:project_id]
+      ps.source = "donation"
+      ps.points = 5
+      ps.save
+
+      user = current_user
+      user.total_points += 5
+      user.save
+    end
 
     respond_to do |format|
 
-      if @donation.save
-        format.html { redirect_to @donation, notice: 'Donation was successfully created.' }
-        format.json { render :show, status: :created, location: @donation }
+      if donation.save
+        format.html { redirect_to '/project/index', notice: 'Donation was successfully created.' }
+        format.json { render :show, status: :created, location: donation }
       else
         format.html { render :new }
-        format.json { render json: @donation.errors, status: :unprocessable_entity }
+        format.json { render json: donation.errors, status: :unprocessable_entity }
       end
 
     end

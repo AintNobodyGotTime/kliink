@@ -5,7 +5,7 @@
 $(".like").click ->
   $.ajax
      url: "/point_source/create"
-     data: user_id: current_user.id, project_id: @project_id, source: "like", points: 1
+     data: user_id: current_user, project_id: project_id, source: "like", points: 1
      error: (jqXHR, textStatus, errorThrown) ->
        console.log "AJAX Error: #{textStatus}"
      success: (data, textStatus, jqXHR) ->
@@ -14,7 +14,17 @@ $(".like").click ->
 $(".share").click ->
   $.ajax
      url: "/point_source/create"
-     data: user_id: current_user.id, project_id: project_id, source: "share", points: 3
+     data: user_id: current_user, project_id: project_id, source: "share", points: 3
+     error: (jqXHR, textStatus, errorThrown) ->
+       console.log "AJAX Error: #{textStatus}"
+     success: (data, textStatus, jqXHR) ->
+       $('body').append "Successful AJAX call: #{data}"
+
+$(".donate").click ->
+  amount = this.data.amount
+  $.ajax
+     url: "/donation/create"
+     data: user_id: current_user, project_id: project_id, source: "donate", amount: amount
      error: (jqXHR, textStatus, errorThrown) ->
        console.log "AJAX Error: #{textStatus}"
      success: (data, textStatus, jqXHR) ->

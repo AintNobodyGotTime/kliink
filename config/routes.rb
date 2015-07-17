@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post '/point_source/create' => "point_source#create"
 
+  post '/donation/create' => "donation#create"
+
   resources :projects
 	devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
