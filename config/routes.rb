@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   post '/project/index' => "project_item_comment#create"
 
+  post '/point_source/create' => "point_source#create"
+
   resources :projects
 	devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
