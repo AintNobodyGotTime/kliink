@@ -28,7 +28,8 @@ class ProjectItemCommentsController < ApplicationController
 
     if @project_item_comment.save
       user_signed_in?
-        current_user.total_points += 3 
+        user = current_user
+        user.total_points += 3 
         @project_item_comment.point_source = "comment"
       end
 
