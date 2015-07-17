@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	root to: "site#index" 
+	root to: "site#index"
 
 	get 'site/index'
 
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   post '/project/index' => "project_item_comment#create"
 
+  post '/point_source/create' => "point_source#create"
+
   resources :projects
 	devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
@@ -17,5 +19,5 @@ Rails.application.routes.draw do
 	#   get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
 	#   get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 	# end
-	 
+
 end

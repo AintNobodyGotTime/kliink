@@ -11,7 +11,7 @@ class DonationController < ApplicationController
         format.html { render :new }
         format.json { render json: @donation.errors, status: :unprocessable_entity }
       end
-    
+
     end
   end
 end
