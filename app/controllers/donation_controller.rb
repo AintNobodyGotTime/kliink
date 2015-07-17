@@ -5,7 +5,7 @@ class DonationController < ApplicationController
     respond_to do |format|
 
       if @donation.save
-        format.html { redirect_to @donatino, notice: 'Project item comment was successfully created.' }
+        format.html { redirect_to @donation, notice: 'Donation was successfully created.' }
         format.json { render :show, status: :created, location: @donation }
       else
         format.html { render :new }
@@ -14,4 +14,4 @@ class DonationController < ApplicationController
     
     end
   end
-  
+end
