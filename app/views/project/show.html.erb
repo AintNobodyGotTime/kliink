@@ -1,38 +1,15 @@
 
-<% @project.project_items.each do |item| %>
+<%= form_for :project_item_comment do |f| %>
+ Comment on this project piece: <%= f.text_field :content %><br />     Comment on this project piece: <%= f.text_field :content %><br />
++ <%= f.hidden_field :project_item_id, :value => project_item.id%>
++ <%= f.hidden_field :user_id, :value => current_user.id%>
+   <%= f.button :submit %>       <%= f.button :submit %>
+ <% end %>     <% end %> 
 
-  <div class="project_item">
-
-     <div class="content">
-       <%=item.content %>
-     </div>
-
-     <div class="interactions">
-       <span class="like_button">
-         <img src="" alt="" class="like">
-       </span>
-       <span class="share_button">
-         <img src="" alt="" class="share">
-       </span>
-     </div>
-
-     <% item.project_item_comments.each do |comment| %>
-       <% user = User.find(comment.user_id) %>
-        <div class="show_comment">
-          <%= comment.content %>
-        </div>
-        <div class="author">
-          - <%=user.first_name%> <%=user.last_name %>
-        </div>
-
-     <% end %>
-
-     <%= form_for :project_item_comment do |f| %>
-      Comment on this project piece: <%= f.text_field :content %><br />
-      <%= f.hidden_field :project_item_id, :value => item.id%>
-      <%= f.hidden_field :user_id, :value => current_user.id%>
-    <%= f.button :submit %>
+<%= form_for :project_item do |f| %>
+  <%= f.fields_for :project_item_comment do |builder| %>
+    <%= label_tag :content %>
+    <%= builder.text_field :content %>
   <% end %>
-  </div>
-
-<% end %>
+  <%= f.submit %>
+  <% end %>
