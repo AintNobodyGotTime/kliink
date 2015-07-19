@@ -11,12 +11,16 @@ class User < ActiveRecord::Base
 	validates :email, presence: true
 	# validates :password_digest, presence: true
 
+  def init
+      self.total_points  ||= 0           #will set the default value only if it's nil
+  end
+
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20] 
-    end	
- end   
+      user.password = Devise.friendly_token[0,20]
+    end
+ end
 
 end

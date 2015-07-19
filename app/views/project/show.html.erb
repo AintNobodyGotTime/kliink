@@ -17,12 +17,12 @@
      </div>
 
      <% item.project_item_comments.each do |comment| %>
-       <% user = User.find(comment.user_id) %>
+       <% author = User.find(comment.user_id) %>
         <div class="show_comment">
           <%= comment.content %>
         </div>
         <div class="author">
-          - <%=user.first_name%> <%=user.last_name %>
+          - <%= author.first_name %> <%= author.last_name %>
         </div>
 
      <% end %>
