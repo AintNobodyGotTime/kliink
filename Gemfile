@@ -29,7 +29,10 @@ gem 'pry-rails'
 
 gem 'certified'
 
+gem 'autoprefixer-rails'
+
 gem 'omniauth'
+
 gem 'omniauth-facebook'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
