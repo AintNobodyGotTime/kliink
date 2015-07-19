@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	root to: "site#index"
+	root to: "project#show"
 
 	get 'site/index'
 
