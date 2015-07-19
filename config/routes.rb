@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/project/index' => "donation#create"
 
-  post '/project/index' => "project_item_comment#create"
+  post '/' => "project_item_comment#create"
 
   post '/point_source/create' => "point_source#create"
 
