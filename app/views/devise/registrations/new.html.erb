@@ -6,33 +6,49 @@
 
 <div class="container">
   
-    <h1> Welcome! </h1>
-    <p>Thank you for helping us test our prototype enabling users to support nonprofits. On this
-    prototype, buttons do not link externally but we encourage you to engage with the site as if they 
-    do. Links to donate and share (to Facebook or Twitter) are not actually real.
-    </p>
-   <br>
-   <br>
+<h1> Welcome! </h1>
+<p>Thank you for helping us test our prototype enabling users to support nonprofits. On this
+prototype, buttons do not link externally but we encourage you to engage with the site as if they 
+do. Links to donate and share (to Facebook or Twitter) are not actually real.
+</p>
+<br>
+<br>
 
 <%= bootstrap_devise_error_messages! %>
 <div class="panel panel-default">
+  
   <div class="panel-heading">
     <h4><%= t('.sign_up', :default => "Sign up") %></h4>
   </div>
+  
   <div class="panel-body">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: "form-control" %>
-      </div>
+
+    <div class="form-group">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, autofocus: true %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </div>
+
       <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
     <% end %>
   </div>
