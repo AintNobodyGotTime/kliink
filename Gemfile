@@ -29,6 +29,8 @@ gem 'pry-rails'
 
 gem 'certified'
 
+gem 'devise-bootstrap-views'
+
 gem 'autoprefixer-rails'
 
 gem 'omniauth'
