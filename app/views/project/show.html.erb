@@ -5,28 +5,6 @@
   <center> <h4> You've earned <%= current_user.total_points %> points! </h4></center>
 <hr>
 
-<div class="row">
-  <div class="col-md-3">
-    <p><img src="/assets/girl_studying.png" style="height:250px;"></img></p>
-  </div>
-
-  <div class="col-md-5">
-    <%= @project.description %>
-  </div>
-
-  <div class="col-md-3">
-   <div class="interactions">
-       <span class="like_button">
-         <img src="" alt="" class="like">
-       </span>
-       <span class="share_button">
-         <img src="" alt="" class="share">
-       </span>
-     </div>
-  </div>
-</div>
-
-
 <div class="well">
 <h3> How this works: </h3>
 
@@ -39,44 +17,74 @@ Creating buzz can be more powerful than donations. The more you spread the word,
 “philanthropist” points you accumulate! </p>
 
 </div>
-<br>
 
-</div>
+<hr>
 
-<% @project.project_items.each do |item| %>
-
-  <div class="project_item">
-
-     <div class="content">
-       <%=item.content %>
-     </div>
-
-     <div class="interactions">
-       <span class="like_button">
-         <img src="" alt="" class="like">
-       </span>
-       <span class="share_button">
-         <img src="" alt="" class="share">
-       </span>
-     </div>
-
-     <% item.project_item_comments.each do |comment| %>
-       <% author = User.find(comment.user_id) %>
-        <div class="show_comment">
-          <%= comment.content %>
-        </div>
-        <div class="author">
-          - <%= author.first_name %> <%= author.last_name %>
-        </div>
-
-     <% end %>
-
-     <%= form_for :project_item_comment do |f| %>
-      Comment on this project piece: <%= f.text_field :content %><br />
-      <%= f.hidden_field :project_item_id, :value => item.id%>
-      <%= f.hidden_field :user_id, :value => current_user.id%>
-    <%= f.button :submit %>
-  <% end %>
+<div class="row">
+  <div class="col-md-3">
+    <p><img src="/assets/girl_studying.png" style="height:250px;"></img></p>
   </div>
 
-<% end %>
+  <div class="col-md-9 description">
+    <div class="description">
+      <h1><%= @project.name %></h1>
+       <%= @project.description %>
+    </div>
+    <div class="interactions">
+       <span class="like_button">
+         <%= image_tag "heart-points-unselected2.jpg", width:200,  alt: "Like", class: "like" %>
+       </span>
+       <span class="comment_button">
+         <%= image_tag "comment-points2.jpg", width:200,  alt: "Comment", class: "comment" %>
+       </span>
+       <span class="share_button">
+        <%= image_tag "share-points2.jpg", width:200, alt: "Share", class: "share" %>
+       </span>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <% @project.project_items.each do |item| %>
+
+    <div class="project_item">
+
+       <div class="content center">
+         <%=item.content %>
+
+         <div class="interactions">
+           <span class="like_button">
+             <%= image_tag "heart-points-unselected2.jpg", width:100,  alt: "Like", class: "like" %>
+           </span>
+           <span class="share_button">
+             <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
+           </span>
+         </div>
+
+       </div>
+
+
+
+       <% item.project_item_comments.each do |comment| %>
+         <% author = User.find(comment.user_id) %>
+          <div class="show_comment">
+            <%= comment.content %>
+          </div>
+          <div class="author">
+            - <%= author.first_name %> <%= author.last_name %>
+          </div>
+
+       <% end %>
+
+       <%= form_for :project_item_comment do |f| %>
+        Comment on this project piece: <%= f.text_field :content %><br />
+        <%= f.hidden_field :project_item_id, :value => item.id%>
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+      <%= f.button :submit %>
+    <% end %>
+    </div>
+
+  <% end %>
+
+  </div>
+
+</div>
