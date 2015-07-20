@@ -1,7 +1,7 @@
 <div class="container">
 
 <hr>
-  <center> <h4 class="user_name"> Welcome <span class="bold-black"><%= current_user.first_name %></span>!</h4></center>
+  <center> <h4 class="user_name"> Welcome <span class="bold-black"><%= current_user.email %></span>!</h4></center>
   <center> <h4 class="total_points"> You've earned <span class="bold-black" id="title_total_points"><%= current_user.total_points %></span> points! </h4></center>
 <hr>
 
@@ -47,13 +47,18 @@ Creating buzz can be more powerful than donations. The more you spread the word,
 <hr>
 
   <div class="row">
+    <ul class="list-group">
+     
     <% @project.project_items.each do |item| %>
 
     <div class="project_item">
 
        <div class="content center">
+         <li class="list-group-item">
          <%=item.content %>
 
+        </li>
+        <li class="list-group-item">
          <div class="interactions">
            <span class="like_button">
              <%= image_tag "heart-points-unselected2.jpg", width:100,  alt: "Like", class: "like" %>
@@ -64,9 +69,18 @@ Creating buzz can be more powerful than donations. The more you spread the word,
          </div>
 
        </div>
+        </li>
 
-
-
+      <li class="list-group-item">
+       <%= form_for :project_item_comment do |f| %>
+        Comment on this project piece: <%= f.text_field :content %><br />
+        <%= f.hidden_field :project_item_id, :value => item.id%>
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+        <%= f.submit 'submit', :class => 'btn btn-primary' %>
+      
+    <% end %>
+  </li>
+  <li class="list-group-item">
        <% item.project_item_comments.each do |comment| %>
          <% author = User.find(comment.user_id) %>
           <div class="show_comment">
@@ -77,13 +91,7 @@ Creating buzz can be more powerful than donations. The more you spread the word,
           </div>
 
        <% end %>
-
-       <%= form_for :project_item_comment do |f| %>
-        Comment on this project piece: <%= f.text_field :content %><br />
-        <%= f.hidden_field :project_item_id, :value => item.id%>
-        <%= f.hidden_field :user_id, :value => current_user.id%>
-      <%= f.button :submit %>
-    <% end %>
+      </li>
     </div>
 
   <% end %>
