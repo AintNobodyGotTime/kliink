@@ -1,3 +1,47 @@
+<div class="container">
+
+<hr>
+  <center> <h4> Welcome  <%= current_user.first_name %>! </h4></center>
+  <center> <h4> You've earned <%= current_user.total_points %> points! </h4></center>
+<hr>
+
+<div class="row">
+  <div class="col-md-3">
+    <p><img src="/assets/girl_studying.png" style="height:250px;"></img></p>
+  </div>
+
+  <div class="col-md-5">
+    <%= @project.description %>
+  </div>
+
+  <div class="col-md-3">
+   <div class="interactions">
+       <span class="like_button">
+         <img src="" alt="" class="like">
+       </span>
+       <span class="share_button">
+         <img src="" alt="" class="share">
+       </span>
+     </div>
+  </div>
+</div>
+
+
+<div class="well">
+<h3> How this works: </h3>
+
+<p>Kliink provides value to non­profit organizations by promoting them. Spreading
+
+the word through trusted sources often results in more donations than direct marketing alone.
+
+Creating buzz can be more powerful than donations. The more you spread the word, the more
+
+“philanthropist” points you accumulate! </p>
+
+</div>
+<br>
+
+</div>
 
 <% @project.project_items.each do |item| %>
 
