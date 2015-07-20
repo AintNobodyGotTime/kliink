@@ -14,11 +14,6 @@
     var project_id = <%=@project.id %>;
   </script>
   <% end %>
-<script>
-  function alertBox() {
-    alert("thank you for liking this project activity");
-}
-</script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -43,13 +38,13 @@
 
             </div>
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" id="nav">
                     <% if !user_signed_in? %>
                     <li><%= link_to 'Log in', new_user_session_path %></li>
                     <li><%= link_to 'Sign up', new_user_registration_path %></li>
                     <% end  %>
                     <% if user_signed_in? %>
-                    <li><li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+                    <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
                      <% end  %>
                 </ul>
 
