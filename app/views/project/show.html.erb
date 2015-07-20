@@ -1,8 +1,8 @@
 <div class="container">
 
 <hr>
-  <center> <h4> Welcome  <%= current_user.first_name %>! </h4></center>
-  <center> <h4> You've earned <%= current_user.total_points %> points! </h4></center>
+  <center> <h4 class="user_name"> Welcome <span class="bold-black"><%= current_user.first_name %></span>!</h4></center>
+  <center> <h4 class="total_points"> You've earned <span class="bold-black"><%= current_user.total_points %></span> points! </h4></center>
 <hr>
 
 <div class="well">
