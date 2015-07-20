@@ -1,0 +1,184 @@
+/* line 1, /Users/emilyhittle/.rvm/gems/ruby-2.2.1/gems/devise-bootstrap-views-0.0.5/app/assets/stylesheets/devise_bootstrap_views.scss */
+.float-none {
+  float: none;
+}
+
+/* line 5, /Users/emilyhittle/.rvm/gems/ruby-2.2.1/gems/devise-bootstrap-views-0.0.5/app/assets/stylesheets/devise_bootstrap_views.scss */
+.panel-heading {
+  padding: 15px;
+}
+/* line 7, /Users/emilyhittle/.rvm/gems/ruby-2.2.1/gems/devise-bootstrap-views-0.0.5/app/assets/stylesheets/devise_bootstrap_views.scss */
+.panel-heading h4 {
+  margin: 0px;
+}
+/* line 5, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+* {
+  font-family: Helvetica;
+}
+
+/* line 9, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+a {
+  color: green;
+}
+
+/* line 13, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+hr {
+  height: 3px;
+  color: #a3a3a3;
+}
+
+/* line 18, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+.bold-black {
+  font-weight: bold;
+  color: #000;
+}
+
+/* line 23, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+h4.user_name {
+  font-size: 27px;
+  color: #a3a3a3;
+}
+
+/* line 28, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+h4.total_points {
+  font-size: 32px;
+  color: #a3a3a3;
+}
+
+/* line 33, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+.description {
+  font-size: 20px;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* line 39, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+#project {
+  width: 100%;
+  height: 300px;
+  overflow: scroll;
+}
+
+/* line 45, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+.project_item {
+  font-size: 19px;
+}
+
+/* line 49, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+.show_comment {
+  font-size: 17px;
+}
+
+/* line 53, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+.author {
+  font-size: 15px;
+}
+
+/* line 57, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/project.scss */
+.well {
+  font-size: 16px;
+}
+/* line 1, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+}
+
+/* line 8, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+}
+
+/* line 13, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 19, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 22, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 56, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 67, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 5, /Users/emilyhittle/Documents/pmi/kliink/app/assets/stylesheets/site.scss */
+a {
+  color: green;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
+a {
+	color: green;
+}
+#nav {
+	font-size: 16pt;
+}
