@@ -40,7 +40,7 @@ h4.total_points {
     height: 400px;
     overflow: scroll;
 }
-  
+
 .project_item {
   font-size:19px;
 }
@@ -55,4 +55,8 @@ h4.total_points {
 
 .well {
   font-size: 16px;
+}
+
+img.like, img.share, img.comment {
+  cursor: pointer
 }
