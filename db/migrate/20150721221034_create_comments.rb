@@ -1,11 +1,11 @@
-class CreateProjectItems < ActiveRecord::Migration
+class CreateComments < ActiveRecord::Migration
   def change
-    create_table :project_items do |t|
+    create_table :comments do |t|
       t.string :content
-      t.string :title
 
       t.timestamps null: false
 
+      t.belongs_to :user
       t.belongs_to :project
     end
   end

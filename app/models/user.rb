@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 	has_many :projects
 	has_many :donations
 	has_many :point_sources
+  has_many :comments 
+  has_many :likes
 
 	validates :email, presence: true
 	# validates :password_digest, presence: true
