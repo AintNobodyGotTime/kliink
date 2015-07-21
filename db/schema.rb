@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716232438) do
+ActiveRecord::Schema.define(version: 20150721221245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "controllers", force: :cascade do |t|
-    t.string   "item_comment"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+  create_table "comments", force: :cascade do |t|
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "project_id"
   end
 
   create_table "donations", force: :cascade do |t|
@@ -28,6 +30,13 @@ ActiveRecord::Schema.define(version: 20150716232438) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "project_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+    t.integer  "project_item_id"
   end
 
   create_table "ngos", force: :cascade do |t|
@@ -46,15 +55,9 @@ ActiveRecord::Schema.define(version: 20150716232438) do
     t.integer  "project_id"
   end
 
-  create_table "project_item_comments", force: :cascade do |t|
-    t.string   "content"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "project_item_id"
-  end
-
   create_table "project_items", force: :cascade do |t|
     t.string   "content"
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "project_id"
@@ -65,7 +68,6 @@ ActiveRecord::Schema.define(version: 20150716232438) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "user_id"
     t.integer  "ngo_id"
   end
 
