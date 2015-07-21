@@ -38,6 +38,8 @@ do. Links to donate and share (to Facebook or Twitter) are not actually real.
       <%= f.password_field :password, class: "form-control" %>
     </div>
 
+      <%= f.hidden_field :total_points, value: 0 %>
+
     <div class="form-group">
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, class: "form-control" %>
