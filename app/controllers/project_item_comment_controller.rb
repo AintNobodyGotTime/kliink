@@ -38,7 +38,7 @@ class ProjectItemCommentController < ApplicationController
       ps.points = 3
       ps.save
 
-      # current_user.total_points = current_user.total_points + 3
+      current_user.total_points = current_user.total_points + 3
       current_user.save
     end
 
