@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//=require timelineJS/embed
 //= require_tree .
 
 

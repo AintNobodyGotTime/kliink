@@ -34,6 +34,8 @@ gem 'devise-bootstrap-views'
 
 gem 'autoprefixer-rails'
 
+gem 'timelineJS-rails', '~> 1.1.5'
+
 gem 'omniauth'
 
 gem 'omniauth-facebook'
