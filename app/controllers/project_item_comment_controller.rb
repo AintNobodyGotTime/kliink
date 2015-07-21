@@ -24,7 +24,7 @@ class ProjectItemCommentController < ApplicationController
   # POST /project_item_comments
   # POST /project_item_comments.json
   def create
-    @user = current_user
+    current_user ||=User.find(params[:project_item_comment][:user_id])
     project_item_comment = ProjectItemComment.new
     project_item_comment.content = params[:project_item_comment][:content]
     project_item_comment.user_id = params[:project_item_comment][:user_id]

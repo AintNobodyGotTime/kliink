@@ -37,8 +37,8 @@ Kliink empowers philanthropists(Like You!) to make a real difference for non-pro
        </span>
     </div>
     <br>
-      <%= image_tag "goals.png" %> 
-    
+      <%= image_tag "goals.png" %>
+
 </div>
 
     </div>
@@ -76,7 +76,7 @@ Kliink empowers philanthropists(Like You!) to make a real difference for non-pro
   <div class="row" id="project">
 
     <ul class="list-group">
-     
+
     <% @project.project_items.each do |item| %>
 
     <div class="project_item">
@@ -89,7 +89,7 @@ Kliink empowers philanthropists(Like You!) to make a real difference for non-pro
         <li class="list-group-item">
          <div class="interactions">
            <span class="like_button", onclick="alert('Thank you for liking this project activity!');">
-             <%= image_tag "heart-points-unselected2.jpg", width:100,  alt: "Like", class: "like" %> 
+             <%= image_tag "heart-points-unselected2.jpg", width:100,  alt: "Like", class: "like" %>
            </span>
            <span class="share_button", onclick="alert('Thank you for sharing this project activity!');">
              <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
@@ -105,7 +105,7 @@ Kliink empowers philanthropists(Like You!) to make a real difference for non-pro
         <%= f.hidden_field :project_item_id, :value => item.id%>
         <%= f.hidden_field :user_id, :value => current_user.id%>
         <%= f.submit 'submit', :class => 'btn btn-primary' %>
-      
+
     <% end %>
   </li>
   <li class="list-group-item">
