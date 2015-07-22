@@ -7,60 +7,52 @@
 
 <div class="well">
   <h4> How this works: </h4>
-    <p>
-<p> Kliink empowers philanthropists (Like You!) and provides value to non-profit organizations by promoting them. Spreading the word through trusted sources often results in more donations than direct marketing alone. Creating buzz by sharing, commenting, and liking items can be more powerful than donations. The more actions you take to spread the word, the more “philanthropist” points you accumulate!
-
- </p>
+    <p> Kliink empowers philanthropists (Like You!) and provides value to non-profit organizations by promoting them. Spreading the word through trusted sources often results in more donations than direct marketing alone. Creating buzz by sharing, commenting, and liking items can be more powerful than donations. The more actions you take to spread the word, the more “philanthropist” points you accumulate!
+     </p>
 </div>
 
 <hr>
 
-<div class="row">
+<div class="row"> 
   <div class="col-md-5">
     <p><img src="/assets/sukrupaProjDescPhoto.jpg" style="height:250px;"></img></p>
   </div>
-
+  
   <div class="col-md-7 description">
     <div class="description">
       <h4><%= @project.name %></h4>
        <%= @project.description %>
     </div>
+    
     <div class="interactions">
        <span class="comment_button">
-
          <a href="#comments-form"><%= image_tag "comment-points2.jpg", width:100,  alt: "Comment", class: "comment" %></a>
-
        </span>
+       
        <span class="share_button" data-toggle="modal" data-target="#myModal3">
         <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
        </span>
-      
-            <div id="myModal3" class="modal fade" role="dialog">
-              <div class="modal-dialog">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <p><%= image_tag "not-shared-project_noBox.jpg", width:560, alt: "Share", class: "share" %></p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+        <div id="myModal3" class="modal fade" role="dialog">
+          <div class="modal-dialog">
 
+            <div class="modal-content">
+              <div class="modal-body">
+                <p><%= image_tag "not-shared-project_noBox.jpg", width:560, alt: "Share", class: "share" %></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
               </div>
             </div>
-          </div>
+
+        </div>
+      </div>
+
     </div>
     <br>
       <a href="#donation-box"><%= image_tag "goals.png", width:350 %></a>
-
-
 </div>
 </div>
-  </div>
-</div>
-
 <hr>
 
 <div class="container">
@@ -109,7 +101,7 @@
 </div>
 
 <div class="container">
-    <div class="comments">
+    <div class="comments" id="comments-form">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3>Comments:</h3>
