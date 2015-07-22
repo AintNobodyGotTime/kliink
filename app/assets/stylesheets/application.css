@@ -23,3 +23,9 @@ a {
 body {
 	font: Helvetica Neue;
 }
+
+#nav-buttons {
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 25px;
+}
