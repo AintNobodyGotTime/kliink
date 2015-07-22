@@ -29,3 +29,7 @@ body {
   padding-right:30px;
   padding-top: 25px;
 }
+
+.navbar-default {
+    background-color: #FFFFFF;
+}

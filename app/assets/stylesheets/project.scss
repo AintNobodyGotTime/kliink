@@ -61,6 +61,11 @@ margin-bottom:20px;
 #donation-box {
   background: #F2F2F2;
   border-radius: 20px;  
+  width: 780px !important;
+}
+
+.panel-default {
+  border-radius: 20px;
 }
 
 .list-group {
@@ -79,6 +84,7 @@ margin-bottom:20px;
 
 .well {
   font-size: 14px;
+  border-radius: 20px;  
 }
 
 img.like, img.share, img.comment {
