@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   get 'comments/show'
 
-  get 'new/show'
-
 	root to: "project#show"
 
 	get 'site/index'

@@ -12,5 +12,6 @@ class PointSourceController < ApplicationController
       @user.total_points += @point_source.points
       @user.save
     end
+    render :nothing => true, :status => 200 and return
   end
 end
