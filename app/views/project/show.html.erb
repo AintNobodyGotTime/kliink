@@ -116,7 +116,7 @@
 
     <ul class="list group">
       <% @project.comments.each do |comment| %>
-        <li class="list-group-item">
+        <li class="list-group-item" class="list-control">
 
          <% author = User.find(comment.user_id) %>
           <div class="show_comment">
