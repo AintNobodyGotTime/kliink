@@ -3,7 +3,7 @@
 
 <hr>
   <center> <h4 class="user_name"> Welcome <span class="bold-black"><%= current_user.first_name %></span>!
-  <class="total_points"> You have <span class="bold-black" id="title_total_points"><%= current_user.total_points %></span> points! </h4></center>
+  You have <span class="bold-black" id="title_total_points"><%= current_user.total_points %></span> points! </h4></center>
 <hr>
 
 <div class="well">
@@ -28,22 +28,17 @@
     </div>
     <div class="interactions">
        <span class="comment_button">
-<<<<<<< HEAD
-         <%= image_tag "comment-points2.jpg", width:100,  alt: "Comment", class: "comment" %>
-=======
-         <a href="#comments-form"><%= image_tag "comment-points2.jpg", width:200,  alt: "Comment", class: "comment" %></a>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
+
+         <a href="#comments-form"><%= image_tag "comment-points2.jpg", width:100,  alt: "Comment", class: "comment" %></a>
+
        </span>
        <span class="share_button">
         <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
        </span>
     </div>
     <br>
-<<<<<<< HEAD
-      <%= image_tag "goals.png", width:380 %>
-=======
-      <a href="#donation-radios"><%= image_tag "goals.png" %></a>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
+      <a href="#donation-radios"><%= image_tag "goals.png", width:350 %></a>
+
 
 </div>
 </div>
@@ -91,21 +86,7 @@
     <%= f.hidden_field :user_id, :value => current_user.id%>
     <%= f.submit 'submit', :class => 'btn btn-primary' %>
     <% end %>
-<<<<<<< HEAD
-=======
-
-
-    </div>
-
-    <div class="comments" id="comments-form">
-      <%= form_for :comment do |f| %>
-      Comment on this project piece: <%= f.text_field :content, style: 'width: 60%;' %><br />
-      <%= f.hidden_field :project_id, :value => @project.id%>
-      <%= f.hidden_field :user_id, :value => current_user.id%>
-      <%= f.submit 'submit', :class => 'btn btn-primary' %>
-      <% end %>
-    </div>
-
+  </div>
     <ul>
       <% @project.comments.each do |comment| %>
         <li class="list-group-item">
@@ -122,7 +103,6 @@
     </ul>
 
     </div>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
   </div>
 
   <ul>
@@ -146,7 +126,6 @@
   <ul class="list-group row" id="donation-radios">
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">$5 pencils</label>
       </div>
     </li>
@@ -158,72 +137,41 @@
     <li class="list-group-item col-xs-6">
       <div class="radio">
         <label><input type="radio" name="optradio">$10 5 books</label>
-=======
-        <label><input type="radio" name="optradio" id="5">$5</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">$250 A central PA system and security guard</label>
-=======
-        <label><input type="radio" name="optradio" id="10">$10</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">$15 Cartridges for water filtration system</label>
-=======
-        <label><input type="radio" name="optradio" id="25">$25</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">$500 An industrial kitchen </label>
-=======
-        <label><input type="radio" name="optradio" id="50">$50</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">$25 The supply of chalk for one year</label>
-=======
-        <label><input type="radio" name="optradio" id="100">$100</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">1000 A small computer lab</label>
-=======
-        <label><input type="radio" name="optradio" id="250">$250</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">$50 Desks and chairs for one class room</label>
-=======
-        <label><input type="radio" name="optradio" id="500">$500</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
     <li class="list-group-item col-xs-6">
       <div class="radio">
-<<<<<<< HEAD
         <label><input type="radio" name="optradio">Other Surprise the students!</label>
-=======
-        <label><input type="radio" name="optradio" id="1">Other</label>
->>>>>>> abdc5068a7860f561e397bf1035c7edd06df1cb6
       </div>
     </li>
   </ul>
