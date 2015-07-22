@@ -28,11 +28,11 @@ $(document).on('click', '.share', ( ->
 )
 
 $(document).on('click', '.donate', ( ->
-  amount = this.data.amount
+  amount = $( 'input:checked' ).attr('id')
   $.ajax
      url: "/donation/create"
      method: "post"
-     data: user_id: current_user, project_id: project_id, source: "donate", amount: amount
+     data: user_id: current_user, project_id: project_id, amount: amount
      error: (jqXHR, textStatus, errorThrown) ->
        console.log "AJAX Error: #{textStatus} #{errorThrown}"
      success: (data, textStatus, jqXHR) ->
