@@ -32,9 +32,26 @@
          <a href="#comments-form"><%= image_tag "comment-points2.jpg", width:100,  alt: "Comment", class: "comment" %></a>
 
        </span>
-       <span class="share_button">
+       <span class="share_button" data-toggle="modal" data-target="#myModal3">
         <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
        </span>
+      
+            <div id="myModal3" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p><%= image_tag "not-shared-project.jpg", width:560, alt: "Share", class: "share" %></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
     </div>
     <br>
       <a href="#donation-radios"><%= image_tag "goals.png", width:350 %></a>
@@ -75,7 +92,7 @@
                       <!-- Modal content-->
                       <div class="modal-content">
                         <div class="modal-body">
-                          <p><%= image_tag "sharing_modal.png", width:560, alt: "Share", class: "share" %></p>
+                          <p><%= image_tag "not-shared-activity.jpg", width:560, alt: "Share", class: "share" %></p>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
