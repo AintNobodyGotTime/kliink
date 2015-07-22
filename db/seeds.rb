@@ -12,6 +12,9 @@ Project.create(description:
 'We are building a 7,500 square foot school located in Rajendra Nagar Slum, one of the most impoverished areas in Bangalore India. The building will provide free schooling to children of families earning less than 20,000 rupees a year. This 15-classroom school will accommodate 300 children and create 30 new jobs. Sukrupa’s goal is to raise 40,000USD. Construction will take approximately nine months. The majority of the children in Rajendra do not attend school full time and never enter high school. What these children lack in resources they make up in perseverance. They are hardworking and often work long hours in construction and domestic service to pay for school, sometimes in lieu of attending classes.
 ', name: 'Sukrupa’s Rajendra School Project', ngo_id:1)
 
-ProjectItem.create(title: 'first item', content:'This 7,500 sq. ft. school will have 15 rooms and will accommodate 300 children.', project_id:1)
-ProjectItem.create(title: 'second item', content:'The Rajendra Nagar slum is home to some of the poorest people in southern India. 60% of the children do not attend school full time and over 50% do not make it to high school.', project_id:1)
-ProjectItem.create(title: 'third item', content:'What these children lack in resources they make up in perserverance. These kids are very hard working and often work long hours in construction and domestic service to pay, and sometimes in lieu of their schooling.', project_id:1)
+ProjectItem.create(title: 'Clearing the land', content: 'The school is built on almost 2 acres.', project_id:1)
+ProjectItem.create(title: 'Laying the bricks!', content: 'It takes a crew of 40+ workers to construct the school. These workers have been working all day for weeks on end to get this structure up. Many of the worker\'s children will attend the school.', project_id:1)
+ProjectItem.create(title:'Installing furniture', content: 'These desks and chairs were made locally at a furniture factory in north Bangalore. The lumber used to make the seats and chairs are sourced within 400 km and are taken from sustainable foresting.', project_id:1 )
+ProjectItem.create(title: 'Library books', content: 'Over 700 books will fill the library', project_id:1)
+ProjectItem.create(title: 'Computer Lab', content: '10 Computers will be used by the children. Each class gets computer time once a week to learn valuable 21 century', project_id:1)
+Project.create(title:'School bus arrives', content:'The school bus will be used for children who live more than 4km away from the school', project_id:1)

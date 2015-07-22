@@ -75,8 +75,6 @@
             <div class="content center">
               <li class="list-group-item">
                 <%=item.content %>
-              </li>
-              <li class="list-group-item">
                 <div class="interactions">
                   <span class="like_button">
                     <%= image_tag "heart-points-unselected2.jpg", width:100,  alt: "Like", class: "like" %>
@@ -125,7 +123,7 @@
                 <%= comment.content %>
               </div>
               <div class="author">
-                - <%= author.first_name %> <%= author.last_name %>
+                 <%= author.first_name %> <%= author.last_name %>
               </div>
           <% end %>
           </li>
