@@ -101,19 +101,19 @@
           <h3>Comments:</h3>
         </div>  
       <div class="panel-body">
-    <ul class="list group">
-      <% @project.comments.each do |comment| %>
-        <li class="list-group-item" class="list-control">
-         <% author = User.find(comment.user_id) %>
-          <div class="show_comment">
-            <%= comment.content %>
-          </div>
-          <div class="author">
-            - <%= author.first_name %> <%= author.last_name %>
-          </div>
-        </li>
-      <% end %>
-    </ul>
+        <ul class="list-group">
+          <% @project.comments.each do |comment| %>
+            <li class="list-group-item">
+             <% author = User.find(comment.user_id) %>
+              <div class="show_comment">
+                <%= comment.content %>
+              </div>
+              <div class="author">
+                - <%= author.first_name %> <%= author.last_name %>
+              </div>
+          <% end %>
+          </li>
+        </ul>
     
     <%= form_for :comment do |f| %>  
       <div class="form-group">
