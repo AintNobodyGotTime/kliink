@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  after_initialize :default_values
 
 	devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
@@ -7,7 +8,7 @@ class User < ActiveRecord::Base
 	has_many :projects
 	has_many :donations
 	has_many :point_sources
-  has_many :comments 
+  has_many :comments
   has_many :likes
 
 	validates :email, presence: true
@@ -23,6 +24,11 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
     end
- end
+  end
+
+  private
+    def default_values
+      self.total_points ||= 0
+    end
 
 end

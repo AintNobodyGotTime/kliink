@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/project/index' => "donation#create"
 
-  post '/' => "comment#create"
+  post '/' => "comments#create"
 
   post '/point_source/create' => "point_source#create"
 

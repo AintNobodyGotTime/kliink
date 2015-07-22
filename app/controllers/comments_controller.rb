@@ -28,12 +28,12 @@ class CommentsController < ApplicationController
     comment = Comment.new
     comment.content = params[:comment][:content]
     comment.user_id = params[:comment][:user_id]
-    comment.project = params[:comment][:project]
+    comment.project_id = params[:comment][:project_id]
 
     if comment.save
       ps = PointSource.new
       ps.user_id = current_user.id
-      ps.project_id = comment.project_item.project.id
+      ps.project_id = comment.project_id
       ps.source = "comment"
       ps.points = 3
       ps.save

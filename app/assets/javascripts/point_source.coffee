@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on('click', '.like', ( ->
-  this.src="assets/heart-points-selected2.jpg"
+  this.src="/assets/heart-points-selected2.jpg"
   $.ajax
      url: "/point_source/create"
      method: "post"
@@ -13,7 +13,6 @@ $(document).on('click', '.like', ( ->
      success: (data, textStatus, jqXHR) ->
        $('body').append "Successful AJAX call: #{data}"
   )
-  refresh_point_total
 )
 
 $(document).on('click', '.share', ( ->
@@ -26,7 +25,6 @@ $(document).on('click', '.share', ( ->
      success: (data, textStatus, jqXHR) ->
        $('body').append "Successful AJAX call: #{data}"
   )
-  refresh_point_total
 )
 
 $(document).on('click', '.donate', ( ->
@@ -40,7 +38,6 @@ $(document).on('click', '.donate', ( ->
      success: (data, textStatus, jqXHR) ->
        $('body').append "Successful AJAX call: #{data}"
   )
-  refresh_point_total
 )
 
 #refresh_point_total = () ->

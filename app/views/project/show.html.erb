@@ -61,29 +61,35 @@ Kliink empowers philanthropists(Like You!) to make a real difference for non-pro
         </li>
 
         <li class="list-group-item">
-         <div class="interactions">
+
+          <div class="interactions">
            <span class="like_button", onclick="alert('Thank you for liking this project activity!');">
              <%= image_tag "heart-points-unselected2.jpg", width:100,  alt: "Like", class: "like" %>
            </span>
            <span class="share_button", onclick="alert('Thank you for sharing this project activity!');">
              <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
            </span>
-         </div>
-
-       </div>
+          </div>
         </li>
+      </div>
+    </div>
 
-      <li class="list-group-item">
-       <%= form_for :project_item_comment do |f| %>
-        Comment on this project piece: <%= f.text_field :content, style: 'width: 60%;' %><br />
-        <%= f.hidden_field :project_item_id, :value => item.id%>
-        <%= f.hidden_field :user_id, :value => current_user.id%>
-        <%= f.submit 'submit', :class => 'btn btn-primary' %>
 
     <% end %>
-  </li>
-  <li class="list-group-item">
-       <% item.project_item_comments.each do |comment| %>
+
+    <div class="comments">
+      <%= form_for :comment do |f| %>
+      Comment on this project piece: <%= f.text_field :content, style: 'width: 60%;' %><br />
+      <%= f.hidden_field :project_id, :value => @project.id%>
+      <%= f.hidden_field :user_id, :value => current_user.id%>
+      <%= f.submit 'submit', :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+
+    <ul>
+      <% @project.comments.each do |comment| %>
+        <li class="list-group-item">
+
          <% author = User.find(comment.user_id) %>
           <div class="show_comment">
             <%= comment.content %>
@@ -91,12 +97,13 @@ Kliink empowers philanthropists(Like You!) to make a real difference for non-pro
           <div class="author">
             - <%= author.first_name %> <%= author.last_name %>
           </div>
+        </li>
+      <% end %>
+    </ul>
 
-       <% end %>
-      </li>
     </div>
 
-    <% end %>
+
 
     </div>
   </div>
