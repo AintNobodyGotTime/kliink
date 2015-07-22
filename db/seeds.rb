@@ -8,9 +8,9 @@
 
 Ngo.create(name:'Sukrupa’s Rajendra School Project', description: 'Sukrupa is a non­profit based in Bangalore India that focuses on creating educational opportunities for children living in extreme poverty.')
 
-Project.create(description: 'Sukrupa’s Rajendra School Project
-We are building a 7,500 square foot school located in Rajendra Nagar Slum, one of the most impoverished areas in Bangalore India. The building will provide free schooling to children of families earning less than 20,000 rupees a year. This 15-classroom school will accommodate 300 children and create 30 new jobs. Sukrupa’s goal is to raise 40,000USD. Construction will take approximately nine months. The majority of the children in Rajendra do not attend school full time and never enter high school. What these children lack in resources they make up in perseverance. They are hardworking and often work long hours in construction and domestic service to pay for school, sometimes in lieu of attending classes.
-', name: 'Building a School', ngo_id:1)
+Project.create(description: 
+'We are building a 7,500 square foot school located in Rajendra Nagar Slum, one of the most impoverished areas in Bangalore India. The building will provide free schooling to children of families earning less than 20,000 rupees a year. This 15-classroom school will accommodate 300 children and create 30 new jobs. Sukrupa’s goal is to raise 40,000USD. Construction will take approximately nine months. The majority of the children in Rajendra do not attend school full time and never enter high school. What these children lack in resources they make up in perseverance. They are hardworking and often work long hours in construction and domestic service to pay for school, sometimes in lieu of attending classes.
+', name: 'Sukrupa’s Rajendra School Project', ngo_id:1)
 
 ProjectItem.create(title: 'first item', content:'This 7,500 sq. ft. school will have 15 rooms and will accommodate 300 children.', project_id:1)
 ProjectItem.create(title: 'second item', content:'The Rajendra Nagar slum is home to some of the poorest people in southern India. 60% of the children do not attend school full time and over 50% do not make it to high school.', project_id:1)

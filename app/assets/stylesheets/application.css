@@ -31,5 +31,10 @@ body {
 }
 
 .navbar-default {
-    background-color: #FFFFFF;
+    background: none !important; 
+  	border: 0 !important;
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
