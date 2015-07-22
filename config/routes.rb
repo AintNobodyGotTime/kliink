@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'admin/users'
+
   get 'comments/new'
 
   get 'comments/show'
