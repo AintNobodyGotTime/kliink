@@ -62,12 +62,28 @@
               </li>
               <li class="list-group-item">
                 <div class="interactions">
-                  <span class="like_button", onclick="alert('Thank you for liking this project activity!');">
+                  <span class="like_button">
                     <%= image_tag "heart-points-unselected2.jpg", width:100,  alt: "Like", class: "like" %>
                   </span>
-                  <span class="share_button", onclick="alert('Thank you for sharing this project activity!');">
+
+                  <span class="share_button", data-toggle="modal" data-target="#myModal">
                     <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
                   </span>
+                  <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <p><%= image_tag "sharing_modal.png", width:560, alt: "Share", class: "share" %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </li>
             </div>
@@ -121,6 +137,7 @@
   </ul>
 </div>
 
+
 <div class="container">
   <div class="well">
     <h3> How Your Donations Make a Difference </h3>
@@ -132,7 +149,7 @@
         </li>
         <li class="list-group-item col-xs-6">
           <div class="radio">
-            <label><input type="radio" name="optradio">$100 Breakfast and lunch for a child for one year</label>
+            <label><input type="radio" name="optradio">$100 Breakfast and lunch for a child </label>
           </div>
         </li>
         <li class="list-group-item col-xs-6">
@@ -176,7 +193,22 @@
           </div>
         </li>
       </ul>
-      <button type="button" onclick="alert('Thank you for donating!')" class="donate btn btn-success");>Donate</button>
+      <button type="button" data-toggle="modal" data-target="#myModal" class="donate btn btn-success">Donate</button>
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <p><%= image_tag "donation_modal.png", width:560, alt: "Share", class: "share" %></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 <footer>
