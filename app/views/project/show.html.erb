@@ -97,27 +97,13 @@
 <div class="container">
     <div class="comments">
       <div class="panel panel-default">
-
-      <div class="panel-heading">
-        <h3>Comment on this project piece:</h3>
-      </div>  
-
+        <div class="panel-heading">
+          <h3>Comments:</h3>
+        </div>  
       <div class="panel-body">
-        <%= form_for :comment do |f| %>
-      
-        <div class="form-group">
-          <%= f.text_field :content, autofocus: true, class: "form-control" %>
-          <%= f.hidden_field :project_id, :value => @project.id%>
-          <%= f.hidden_field :user_id, :value => current_user.id%>
-          </div>
-          <%= f.submit 'submit', :class => 'btn btn-primary' %>
-          <% end %>
-      </div>  
-
     <ul class="list group">
       <% @project.comments.each do |comment| %>
         <li class="list-group-item" class="list-control">
-
          <% author = User.find(comment.user_id) %>
           <div class="show_comment">
             <%= comment.content %>
@@ -128,60 +114,72 @@
         </li>
       <% end %>
     </ul>
-  </div>
- </div> 
-</div> 
+    
+    <%= form_for :comment do |f| %>  
+      <div class="form-group">
+        <%= f.text_field :content, autofocus: true, class: "form-control", :placeholder => "Share your thoughts on this project." %>
+        <%= f.hidden_field :project_id, :value => @project.id%>
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+        </div>
+        <div class="pull-right">
+        <%= f.submit 'post', :class => 'btn btn-success' %>
+        </div>
+        <% end %>
+      </div>
+   </div> 
+  </div> 
+</div>
     
 <div class="container">
   <div class="well">
     <h3> How Your Donations Make a Difference </h3>
       <ul class="list-group row" id="donation-radios">
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$5 200 pencils</label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$100 Breakfast & lunch per child per year </label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$10 5 books</label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$250 Security guard for 2 months</label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$15 3 water filtration cartridges</label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$500 An industrial kitchen </label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$25 Boxes of chalk for 1 year</label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">1000 A small computer lab</label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">$50 Desks & chairs for 1 classroom</label>
           </div>
         </li>
-        <li class="list-group-item col-xs-6">
+        <li class="list-group-item col-xs-4">
           <div class="radio">
             <label><input type="radio" name="optradio">Other Surprise the students!</label>
           </div>
