@@ -35,10 +35,10 @@ class CommentsController < ApplicationController
       ps.user_id = current_user.id
       ps.project_id = comment.project_id
       ps.source = "comment"
-      ps.points = 3
+      ps.points = 2
       ps.save
 
-      current_user.total_points = current_user.total_points + 3
+      current_user.total_points = current_user.total_points + 2
       current_user.save
     end
 
