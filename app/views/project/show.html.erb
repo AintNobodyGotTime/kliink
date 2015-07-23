@@ -13,22 +13,22 @@
 
 <hr>
 
-<div class="row"> 
+<div class="row">
   <div class="col-md-5">
     <p><img src="/assets/sukrupaProjDescPhoto.jpg" style="height:250px;"></img></p>
   </div>
-  
+
   <div class="col-md-7 description">
     <div class="description">
       <h4><%= @project.name %></h4>
        <%= @project.description %>
     </div>
-    
+
     <div class="interactions">
        <span class="comment_button">
          <a href="#comments-form"><%= image_tag "comment-points2.jpg", width:100,  alt: "Comment", class: "comment" %></a>
        </span>
-       
+
        <span class="share_button" data-toggle="modal" data-target="#myModal3">
         <%= image_tag "share-points2.jpg", width:100, alt: "Share", class: "share" %>
        </span>
@@ -96,8 +96,8 @@
           </div>
         <% end %>
       </ul>
-    </div> 
-  </div>    
+    </div>
+  </div>
 </div>
 
 <div class="container">
@@ -105,7 +105,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3>Comments:</h3>
-        </div>  
+        </div>
       <div class="panel-body">
         <ul class="list-group">
           <% @project.comments.each do |comment| %>
@@ -120,8 +120,8 @@
           <% end %>
           </li>
         </ul>
-    
-    <%= form_for :comment do |f| %>  
+
+    <%= form_for :comment do |f| %>
       <div class="form-group">
         <%= f.text_field :content, class: "form-control", :placeholder => "Share your thoughts on this project." %>
         <%= f.hidden_field :project_id, :value => @project.id%>
@@ -132,37 +132,37 @@
         </div>
         <% end %>
       </div>
-   </div> 
-  </div> 
+   </div>
+  </div>
 </div>
-    
+
 <div class="container" id="donation-box">
     <h3> How Your Donations Make a Difference </h3>
-    
+
     <div class="row-fluid">
       <div class="col-sm-6">
         <div class="radio">
-            <label><input type="radio" name="optradio"> <span class="amount">$5</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200 pencils</label>
+            <label><input type="radio" name="optradio" id="5"> <span class="amount">$5</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200 pencils</label>
         </div>
       </div>
-      
+
       <div class="col-sm-6">
         <div class="radio">
-          <label><input type="radio" name="optradio"><span class="amount">$100 </span>&nbsp;&nbsp;&nbsp;&nbsp;Breakfast & lunch per child per year</label>
+          <label><input type="radio" name="optradio" id="100"><span class="amount">$100 </span>&nbsp;&nbsp;&nbsp;&nbsp;Breakfast & lunch per child per year</label>
         </div>
       </div>
      </div>
-     
+
      <div class="row-fluid">
        <div class="col-sm-6">
           <div class="radio">
-            <label><input type="radio" name="optradio"><span class="amount">$10 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   5 books </label>
+            <label><input type="radio" name="optradio" id="10"><span class="amount">$10 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   5 books </label>
           </div>
        </div>
-       
+
         <div class="col-sm-6">
           <div class="radio">
-            <label><input type="radio" name="optradio"><span class="amount">$250</span> &nbsp;&nbsp;&nbsp;&nbsp;  Security guard for 2 months </label>
+            <label><input type="radio" name="optradio" id="250"><span class="amount">$250</span> &nbsp;&nbsp;&nbsp;&nbsp;  Security guard for 2 months </label>
           </div>
         </div>
       </div>
@@ -170,46 +170,46 @@
       <div class="row-fluid">
         <div class="col-sm-6">
           <div class="radio">
-            <label><input type="radio" name="optradio"><span class="amount">$15 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   3 water filtration cartridges</label>
+            <label><input type="radio" name="optradio" id="15"><span class="amount">$15 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   3 water filtration cartridges</label>
           </div>
         </div>
-        
+
         <div class="col-sm-6">
           <div class="radio">
-              <label><input type="radio" name="optradio"><span class="amount">$500 </span>&nbsp;&nbsp;&nbsp;&nbsp;  An industrial kitchen</label>
+              <label><input type="radio" name="optradio" id="500"><span class="amount">$500 </span>&nbsp;&nbsp;&nbsp;&nbsp;  An industrial kitchen</label>
           </div>
         </div>
        </div>
-       
+
        <div class="row-fluid">
          <div class="col-sm-6">
           <div class="radio">
-            <label><input type="radio" name="optradio"><span class="amount">$25 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Boxes of chalk for 1 year</label>
+            <label><input type="radio" name="optradio" id="25"><span class="amount">$25 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Boxes of chalk for 1 year</label>
           </div>
          </div>
-         
+
          <div class="col-sm-6">
           <div class="radio">
-            <label><input type="radio" name="optradio"><span class="amount">$1000 </span>&nbsp;&nbsp;&nbsp; A small computer lab</label>
+            <label><input type="radio" name="optradio" id="1000"><span class="amount">$1000 </span>&nbsp;&nbsp;&nbsp; A small computer lab</label>
           </div>
          </div>
         </div>
-        
+
         <div class="row-fluid">
           <div class="col-sm-6">
             <div class="radio">
-            <label><input type="radio" name="optradio"><span class="amount">$50 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desks & chairs for 1 classroom</label>
+            <label><input type="radio" name="optradio" id="50"><span class="amount">$50 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desks & chairs for 1 classroom</label>
             </div>
           </div>
-          
+
           <div class="col-sm-6">
             <div class="radio">
-            <label><input type="radio" name="optradio"><span class="amount">Other </span>&nbsp;&nbsp; Surprise the students!</label>
+            <label><input type="radio" name="optradio" id="0"><span class="amount">Other </span>&nbsp;&nbsp; Surprise the students!</label>
             </div>
           </div>
          </div>
-         
-         <div class="row-fluid"> 
+
+         <div class="row-fluid">
           <div class="col-sm-6 col-sm-offset-6 buffer">
               <button type="button" data-toggle="modal" data-target="#myModal2" class="donate btn btn-success">Donate Now</button>
               <div id="myModal2" class="modal fade" role="dialog">
@@ -226,7 +226,7 @@
               </div>
             </div>
           </div>
-      </div> 
+      </div>
 <footer>
   <br>
   <br>

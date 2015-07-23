@@ -1,7 +1,7 @@
 class DonationController < ApplicationController
   def create
   	donation = Donation.new
-    donation.amount = params[:amount]
+    donation.amount = params[:amount].to_i
     donation.user_id = params[:user_id]
     donation.project_id = params[:project_id]
 
