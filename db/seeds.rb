@@ -12,6 +12,7 @@ Project.create(description:
 'Sukrupa is a Bangalore, India­based non­profit organization that creates educational opportunities for children living in extreme poverty. We are building a 7,500 square foot school located in Rajendra Nagar Slum, one of the most impoverished areas in Bangalore India. The building will provide free schooling to children of families earning less than 20,000 rupees a year. This 15-classroom school will accommodate 300 children and create 30 new jobs. Sukrupa’s goal is to raise 40,000USD. 
 ', name: 'Sukrupa’s Rajendra School Project', ngo_id:1)
 
+
 ProjectItem.create(title: 'Clearing the land', content: 'The school is built on almost 2 acres.', project_id:1)
 ProjectItem.create(title: 'Laying the bricks', content: 'It takes a crew of 40+ workers to construct the school. These workers have been working all day for weeks on end to get this structure up. Many of the worker\'s children will attend the school.', project_id:1)
 ProjectItem.create(title:'Installing furniture', content: 'Desks and chairs were made locally at a furniture factory in north Bangalore. The lumber used to make the seats and chairs are sourced within 400 km and are taken from sustainable foresting.', project_id:1 )
