@@ -50,7 +50,7 @@
 
     </div>
     <br>
-      <a href="#donation-box"><%= image_tag "funding_goals.png", width:400 %></a>
+      <a href="#donation-box"><%= image_tag "goals_new.png", width:400 %></a>
   </div>
 </div>
 <hr>
@@ -66,6 +66,7 @@
           <div class="project_item">
             <div class="content center">
               <li class="list-group-item">
+                <h4><%=item.title %></h4><br>
                 <%=item.content %>
                 <div class="interactions">
                   <span class="like_button">
