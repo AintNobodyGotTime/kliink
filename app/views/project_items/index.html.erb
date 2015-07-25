@@ -17,7 +17,7 @@
       <%= project_item.content %>
       <%= project_item.url %> </td>
       <% if project_item.url != nil %>
-      <%= image_tag (project_item.url) %>
+      <%= image_tag (project_item.url, size="10x10") %>
       <% end %>
         <td><%= link_to 'Show', project_item %> </td> 
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %> </td>
