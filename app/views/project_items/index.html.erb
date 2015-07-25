@@ -15,7 +15,6 @@
     <tr>
       <td><%= project_item.title %> 
       <%= project_item.content %>
-      <% if project_item.url = !nil %>
       <img_src="<%= project_item.url %>" </img></td>
         <td><%= link_to 'Show', project_item %></td>
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %></td>
