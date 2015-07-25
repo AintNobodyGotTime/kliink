@@ -24,10 +24,10 @@ class ProjectItemsController < ApplicationController
   # POST /project_items
   # POST /project_items.json
   def create
-    @project_item = ProjectItem.new(project_item_params)
-    # @project_item.title = params[:title]
-    # @project_item.content = params[:content]
-    # @project_item.url = params[:url]
+    @project_item = ProjectItem.new
+    @project_item.title = params[:title]
+    @project_item.content = params[:content]
+    @project_item.url = params[:url]
     @project_item.save
 
     respond_to do |format|

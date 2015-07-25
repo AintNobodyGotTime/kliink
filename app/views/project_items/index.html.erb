@@ -13,9 +13,9 @@
     <% @project_items.each do |project_item| %>
 
     <tr>
-      <%= project_item.title %> <br>
-      <%= project_item.content %><br>
-      <%= image_tag(project_item.url, class: 'project_item') %>
+      <td><%= project_item.title %> </td>
+      <td><%= project_item.content %></td>
+      <td><%= image_tag(project_item.url, class: 'project_item') %></td>
         <td><%= link_to 'Show', project_item %></td>
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %></td>
         <td><%= link_to 'Destroy', project_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
