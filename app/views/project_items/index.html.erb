@@ -16,7 +16,9 @@
       <td><%= project_item.title %> 
       <%= project_item.content %>
       <%= project_item.url %> </td>
+      <% if project_item.url = !nil %>
       <img src="Project_item.url" style="height:250px;"></img>
+      <% end %>
         <td><%= link_to 'Show', project_item %> </td> 
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %> </td>
         <td><%= link_to 'Destroy', project_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
