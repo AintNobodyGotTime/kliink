@@ -15,6 +15,7 @@
     <tr>
       <td><%= project_item.title %> </td>
       <td><%= project_item.content %></td>
+      <td>image_tag(project_item, class: 'url') </td>
       <td><%= project_item.url %> </td>
         <td><%= link_to 'Show', project_item %></td>
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %></td>
