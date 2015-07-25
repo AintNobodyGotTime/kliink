@@ -11,6 +11,9 @@
 
   <tbody>
     <% @project_items.each do |project_item| %>
+      <%= project_item.title %> <br>
+      <%= project_item.content %><br>
+      <%= project_item.url %>
       <tr>
         <td><%= link_to 'Show', project_item %></td>
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %></td>
