@@ -25,7 +25,8 @@ class ProjectItemsController < ApplicationController
   # POST /project_items.json
   def create
     @project_item = ProjectItem.new (project_item_params)
-    @project_item.save
+    project = Project.first
+    @project_item = project.@project_item
 
     respond_to do |format|
       if @project_item.save
