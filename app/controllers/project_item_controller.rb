@@ -25,7 +25,7 @@ class ProjectItemsController < ApplicationController
   # POST /project_items.json
   def create
     @project_item = ProjectItem.new (project_item_params)
-    # @project_item.project_id = 1
+    @project_item.project_id = 1
 
     respond_to do |format|
       if @project_item.save
@@ -70,6 +70,6 @@ class ProjectItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_item_params
-      params.require(:project_item, :project_id).permit(:title, :content, :url) 
+      params.require(:project_item).permit(:title, :content, :url) 
     end
 end
