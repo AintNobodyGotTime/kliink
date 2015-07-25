@@ -28,6 +28,8 @@ gem 'simple_form'
 
 gem 'pry-rails'
 
+gem 'auto_html'
+
 gem 'certified'
 
 gem 'devise-bootstrap-views'
