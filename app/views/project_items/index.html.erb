@@ -16,8 +16,8 @@
       <td><%= project_item.title %> 
       <%= project_item.content %>
       <%= project_item.url %> </td>
-        <td><%= link_to 'Show', project_item %></td>
-        <td><%= link_to 'Edit', edit_project_item_path(project_item) %></td>
+        <td><%= link_to 'Show', project_item %> |</td> 
+        <td><%= link_to 'Edit', edit_project_item_path(project_item) %> |</td>
         <td><%= link_to 'Destroy', project_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

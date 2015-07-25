@@ -1,3 +1,6 @@
+
+<div="container">
+
 <%= simple_form_for(@project_item) do |f| %>
   <%= f.error_notification %>
 
@@ -15,9 +18,11 @@
     <%= f.label :url %>
     <%= f.text_field :url, class: "form-control" %>
   </div>
-  
+
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+
+</div>
