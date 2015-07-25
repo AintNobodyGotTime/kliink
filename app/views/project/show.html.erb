@@ -62,7 +62,7 @@
       <div class="row" id="project">
 
       <ul class="list-group">
-        <% @project.project_items.each do |item| %>
+        <% @project.project_items.order('created_at DESC').each do |item| %>
           <div class="project_item">
             <div class="content center">
               <li class="list-group-item">
