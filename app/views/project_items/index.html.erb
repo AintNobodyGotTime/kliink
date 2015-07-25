@@ -14,10 +14,9 @@
 
     <tr>
       <td><%= project_item.title %> 
-      <%= project_item.content %>
-      <%= project_item.url %> </td>
-      <% if project_item.url != nil %>
-      <%= image_tag (project_item.url), height:250 %>
+      <%= project_item.content %> </td>
+      <td><% if project_item.url != nil %>
+      <td><%= image_tag (project_item.url), height:250 %></td>
       <% end %>
         <td><%= link_to 'Show', project_item %> </td> 
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %> </td>
