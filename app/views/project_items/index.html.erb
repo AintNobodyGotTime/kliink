@@ -18,7 +18,7 @@
       <td><% if project_item.url != nil %>
       <td><%= image_tag (project_item.url), height:200, width:300, class:"img-rounded" %></td>
       <% end %>
-        <td><%= link_to 'Show', project_item %> &nbsp;</td> 
+        <td><%= link_to 'Show', project_item %></td> 
         <td><%= link_to 'Edit', edit_project_item_path(project_item) %> </td>
         <td><%= link_to 'Destroy', project_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
