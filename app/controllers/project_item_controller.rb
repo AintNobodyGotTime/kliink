@@ -29,6 +29,7 @@ class ProjectItemsController < ApplicationController
 
     respond_to do |format|
       if @project_item.save
+        @project_item.project_id = 1
         format.html { redirect_to @project_item, notice: 'Project item was successfully created.' }
         format.json { render :show, status: :created, location: @project_item }
       else
